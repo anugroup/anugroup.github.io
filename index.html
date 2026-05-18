@@ -3,191 +3,338 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ANU Group LLC</title>
+
+  <title>ANU Group LLC | Safety & Construction Support</title>
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f5;
-      color: #1f2933;
-      position: relative;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    body::before {
-      content: "ANU GROUP LLC";
-      position: fixed;
-      top: 35%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-25deg);
-      font-size: 80px;
-      font-weight: bold;
-      color: rgba(0, 0, 0, 0.05);
-      z-index: -1;
-      white-space: nowrap;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111827;
+      color: #ffffff;
+      line-height: 1.6;
     }
 
     header {
-      background: #1f2933;
-      color: white;
-      padding: 35px 20px;
+      background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1974&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
       text-align: center;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 36px;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #f59e0b;
     }
 
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
+    .contact-info {
+      margin-bottom: 20px;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .contact-info a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-text {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #f59e0b;
+      color: #111827;
+      padding: 14px 30px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ffffff;
+      color: #111827;
     }
 
     section {
-      max-width: 1000px;
-      margin: 25px auto;
-      padding: 25px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    h2 {
-      color: #1f2933;
-      border-bottom: 2px solid #d1d5db;
-      padding-bottom: 8px;
+    section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: #f59e0b;
     }
 
-    ul {
-      line-height: 1.8;
-    }
-
-    .services {
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: #f9fafb;
-      padding: 18px;
-      border-left: 5px solid #1f2933;
-      border-radius: 8px;
+      background-color: #1f2937;
+      padding: 30px;
+      border-radius: 10px;
+      border-left: 5px solid #f59e0b;
     }
 
-    .price {
-      font-weight: bold;
-      color: #166534;
+    .card h3 {
+      margin-bottom: 20px;
+      color: #f59e0b;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card ul li {
+      margin-bottom: 12px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+    }
+
+    .why-us ul,
+    .clients ul {
+      list-style: none;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .why-us ul li,
+    .clients ul li {
+      background-color: #1f2937;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-left: 5px solid #f59e0b;
+      border-radius: 5px;
+    }
+
+    .cta {
+      text-align: center;
+      background-color: #1f2937;
+      border-radius: 10px;
+      padding: 60px 20px;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      background: #1f2933;
-      color: white;
-      margin-top: 30px;
+      padding: 30px 20px;
+      background-color: #0b1120;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-text h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>ANU Group LLC</h1>
-  <p>Safety Consulting | OSHA Training | Jobsite Audits | Construction Support | Property Maintenance</p>
-</header>
+  <header>
 
-<section>
-  <h2>About ANU Group LLC</h2>
-  <p>
-    ANU Group LLC provides professional safety consulting, OSHA-authorized 10 and 30 Hour training,
-    construction support, and property maintenance services throughout Indiana and surrounding areas.
-    We specialize in jobsite safety audits, safety plans, hazard identification, OSHA compliance support,
-    and workplace safety solutions for contractors, utility companies, and businesses.
-  </p>
-  <p>
-    With experience in electrical utility construction, transmission, distribution, storm restoration,
-    underground and overhead systems, and commercial construction, we deliver real-world expertise.
-    We also offer home construction, general labor, lawn mowing, edging, trimming, and dependable
-    property maintenance services.
-  </p>
-</section>
+    <h1>ANU Group LLC</h1>
 
-<section>
-  <h2>Services</h2>
-
-  <div class="services">
-    <div class="card">
-      <h3>OSHA-Authorized Training</h3>
-      <p>OSHA 10-Hour and OSHA 30-Hour construction safety training.</p>
-      <p class="price">$150 – $500</p>
+    <div class="contact-info">
+      📞 <a href="tel:14633209222">463-320-9222</a>
+      &nbsp; | &nbsp;
+      ✉️ <a href="mailto:anugroupintegrity@gmail.com">
+        anugroupintegrity@gmail.com
+      </a>
     </div>
 
-    <div class="card">
-      <h3>Safety Audits</h3>
-      <p>Jobsite inspections, hazard identification, corrective action reports, and compliance support.</p>
-      <p class="price">$750 – $2,500</p>
+    <div class="hero-text">
+
+      <h2>
+        Safety-Driven Construction Support for Utility and Commercial Projects
+      </h2>
+
+      <p>
+        ANU Group LLC provides OSHA-focused safety consulting,
+        construction support, and field solutions for general
+        contractors, utility contractors, infrastructure teams,
+        and commercial construction projects throughout Indiana.
+      </p>
+
+      <a href="mailto:anugroupintegrity@gmail.com" class="btn">
+        Schedule a Consultation
+      </a>
+
     </div>
 
-    <div class="card">
-      <h3>Safety Plans</h3>
-      <p>Custom safety plans, JHA/JSA support, PPE programs, fall protection planning, and documentation.</p>
-      <p class="price">$500 – $3,000</p>
+  </header>
+
+  <section>
+
+    <h2>Core Capabilities</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Safety & Compliance</h3>
+
+        <ul>
+          <li>✔ OSHA Compliance Support</li>
+          <li>✔ Jobsite Safety Audits</li>
+          <li>✔ Hazard Identification</li>
+          <li>✔ Toolbox Talks</li>
+          <li>✔ Safety Documentation</li>
+          <li>✔ Incident Prevention Support</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Construction & Utility Support</h3>
+
+        <ul>
+          <li>✔ Utility Field Support</li>
+          <li>✔ Commercial Site Support</li>
+          <li>✔ Storm Restoration</li>
+          <li>✔ Infrastructure Support</li>
+          <li>✔ Material Coordination</li>
+          <li>✔ Skilled Field Assistance</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Industry Experience</h3>
+
+        <ul>
+          <li>✔ Transmission Systems</li>
+          <li>✔ Distribution Systems</li>
+          <li>✔ Underground Utilities</li>
+          <li>✔ Commercial Construction</li>
+          <li>✔ Utility Infrastructure</li>
+          <li>✔ Safety-Focused Operations</li>
+        </ul>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h3>Construction Support</h3>
-      <p>Home construction support, general labor, electrical construction knowledge, and project assistance.</p>
-      <p class="price">Call for estimate</p>
-    </div>
+  </section>
 
-    <div class="card">
-      <h3>Lawn Care</h3>
-      <p>Lawn mowing, edging, trimming, cleanup, and property maintenance.</p>
-      <p class="price">Call for pricing</p>
-    </div>
-  </div>
-</section>
+  <section class="about">
 
-<section>
-  <h2>Why Choose ANU Group LLC?</h2>
-  <ul>
-    <li>OSHA 500 Authorized Construction Outreach Trainer</li>
-    <li>OSHA 510 trained in construction safety standards</li>
-    <li>Journeyman Lineman with real field experience</li>
-    <li>Experience in transmission, distribution, storm restoration, underground, and overhead utility work</li>
-    <li>Skilled in JHA/JSA, toolbox talks, safety audits, incident support, and corrective action planning</li>
-    <li>Knowledge of OSHA 29 CFR 1910, OSHA 29 CFR 1926, NFPA 70E, and NESC safety practices</li>
-    <li>Commercial construction and hospital construction experience</li>
-    <li>Professional, reliable, safety-focused, and customer-service driven</li>
-  </ul>
-</section>
+    <h2>About ANU Group LLC</h2>
 
-<section>
-  <h2>Core Skills</h2>
-  <ul>
-    <li>Job Hazard Analysis / Job Safety Analysis</li>
-    <li>OSHA compliance support</li>
-    <li>Electrical safety and utility safety</li>
-    <li>Fall protection awareness</li>
-    <li>PPE inspections and safety documentation</li>
-    <li>Incident and near-miss investigation support</li>
-    <li>Contractor and subcontractor safety oversight</li>
-    <li>DOT and fleet safety awareness</li>
-    <li>Emergency response and storm restoration safety</li>
-  </ul>
-</section>
+    <p>
+      ANU Group LLC is a minority-owned company focused on
+      safety-driven construction support, OSHA compliance,
+      and utility field services. With real-world experience
+      in transmission, distribution, storm restoration,
+      commercial construction, and field safety, we help
+      contractors and project teams operate more safely,
+      efficiently, and professionally.
+    </p>
 
-<section>
-  <h2>Contact</h2>
-  <p><strong>Phone:</strong> 463-320-9222</p>
-  <p><strong>Email:</strong> anugroupintegrity@gmail.com</p>
-  <p><strong>Service Area:</strong> Indiana and surrounding areas</p>
-</section>
+  </section>
 
-<footer>
-  <p>ANU Group LLC | Safety. Integrity. Professional Service.</p>
-</footer>
+  <section class="why-us">
+
+    <h2>Why Contractors Partner With Us</h2>
+
+    <ul>
+      <li>OSHA 500 Authorized Outreach Trainer</li>
+      <li>Journeyman Lineman Experience</li>
+      <li>Commercial Construction Background</li>
+      <li>Utility Infrastructure Experience</li>
+      <li>Storm Restoration Experience</li>
+      <li>Field-Tested Safety Knowledge</li>
+      <li>CDL Holder</li>
+      <li>Minority-Owned Business</li>
+    </ul>
+
+  </section>
+
+  <section class="clients">
+
+    <h2>Who We Support</h2>
+
+    <ul>
+      <li>General Contractors</li>
+      <li>Utility Contractors</li>
+      <li>Municipal Projects</li>
+      <li>Commercial Developers</li>
+      <li>Infrastructure Teams</li>
+      <li>Construction Management Teams</li>
+    </ul>
+
+  </section>
+
+  <section class="cta">
+
+    <h2>Partner With ANU Group LLC</h2>
+
+    <p>
+      Contact us today to discuss construction support,
+      safety consulting, subcontracting opportunities,
+      and project partnerships.
+    </p>
+
+    <a href="mailto:anugroupintegrity@gmail.com" class="btn">
+      Request Capability Statement
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 ANU Group LLC | Safety-Driven Construction Support
+  </footer>
 
 </body>
 </html>
