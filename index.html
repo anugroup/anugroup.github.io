@@ -1,37 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ANU Group LLC</title>
-    <style>
-        body { font-family: Arial; margin: 40px; background: #f4f4f4; }
-        .box { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; }
-        h1 { color: #111; }
-        .price { color: green; font-weight: bold; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANU Group LLC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f5;
+      color: #1f2933;
+      position: relative;
+    }
+
+    body::before {
+      content: "ANU GROUP LLC";
+      position: fixed;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-25deg);
+      font-size: 80px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.05);
+      z-index: -1;
+      white-space: nowrap;
+    }
+
+    header {
+      background: #1f2933;
+      color: white;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 25px auto;
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #1f2933;
+      border-bottom: 2px solid #d1d5db;
+      padding-bottom: 8px;
+    }
+
+    ul {
+      line-height: 1.8;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .card {
+      background: #f9fafb;
+      padding: 18px;
+      border-left: 5px solid #1f2933;
+      border-radius: 8px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #166534;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #1f2933;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 
 <body>
 
-<h1>ANU Group LLC</h1>
-<p><strong>Safety Consulting | OSHA Training | Jobsite Audits</strong></p>
+<header>
+  <h1>ANU Group LLC</h1>
+  <p>Safety Consulting | OSHA Training | Jobsite Audits | Construction Support | Property Maintenance</p>
+</header>
 
-<div class="box">
-<h2>Services</h2>
-<p>OSHA Training <br><span class="price">$150–$500</span></p>
-<p>Safety Audits <br><span class="price">$750–$2,500</span></p>
-<p>Safety Plans <br><span class="price">$500–$3,000</span></p>
-</div>
+<section>
+  <h2>About ANU Group LLC</h2>
+  <p>
+    ANU Group LLC provides professional safety consulting, OSHA-authorized 10 and 30 Hour training,
+    construction support, and property maintenance services throughout Indiana and surrounding areas.
+    We specialize in jobsite safety audits, safety plans, hazard identification, OSHA compliance support,
+    and workplace safety solutions for contractors, utility companies, and businesses.
+  </p>
+  <p>
+    With experience in electrical utility construction, transmission, distribution, storm restoration,
+    underground and overhead systems, and commercial construction, we deliver real-world expertise.
+    We also offer home construction, general labor, lawn mowing, edging, trimming, and dependable
+    property maintenance services.
+  </p>
+</section>
 
-<div class="box">
-<h2>Why Choose Me</h2>
-<p>Journeyman Lineman + OSHA 500 Certified<br>
-Real field experience.</p>
-</div>
+<section>
+  <h2>Services</h2>
 
-<div class="box">
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
-</div>
+  <div class="services">
+    <div class="card">
+      <h3>OSHA-Authorized Training</h3>
+      <p>OSHA 10-Hour and OSHA 30-Hour construction safety training.</p>
+      <p class="price">$150 – $500</p>
+    </div>
+
+    <div class="card">
+      <h3>Safety Audits</h3>
+      <p>Jobsite inspections, hazard identification, corrective action reports, and compliance support.</p>
+      <p class="price">$750 – $2,500</p>
+    </div>
+
+    <div class="card">
+      <h3>Safety Plans</h3>
+      <p>Custom safety plans, JHA/JSA support, PPE programs, fall protection planning, and documentation.</p>
+      <p class="price">$500 – $3,000</p>
+    </div>
+
+    <div class="card">
+      <h3>Construction Support</h3>
+      <p>Home construction support, general labor, electrical construction knowledge, and project assistance.</p>
+      <p class="price">Call for estimate</p>
+    </div>
+
+    <div class="card">
+      <h3>Lawn Care</h3>
+      <p>Lawn mowing, edging, trimming, cleanup, and property maintenance.</p>
+      <p class="price">Call for pricing</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Why Choose ANU Group LLC?</h2>
+  <ul>
+    <li>OSHA 500 Authorized Construction Outreach Trainer</li>
+    <li>OSHA 510 trained in construction safety standards</li>
+    <li>Journeyman Lineman with real field experience</li>
+    <li>Experience in transmission, distribution, storm restoration, underground, and overhead utility work</li>
+    <li>Skilled in JHA/JSA, toolbox talks, safety audits, incident support, and corrective action planning</li>
+    <li>Knowledge of OSHA 29 CFR 1910, OSHA 29 CFR 1926, NFPA 70E, and NESC safety practices</li>
+    <li>Commercial construction and hospital construction experience</li>
+    <li>Professional, reliable, safety-focused, and customer-service driven</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Core Skills</h2>
+  <ul>
+    <li>Job Hazard Analysis / Job Safety Analysis</li>
+    <li>OSHA compliance support</li>
+    <li>Electrical safety and utility safety</li>
+    <li>Fall protection awareness</li>
+    <li>PPE inspections and safety documentation</li>
+    <li>Incident and near-miss investigation support</li>
+    <li>Contractor and subcontractor safety oversight</li>
+    <li>DOT and fleet safety awareness</li>
+    <li>Emergency response and storm restoration safety</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p><strong>Phone:</strong> 317-420-5373</p>
+  <p><strong>Email:</strong> auzu85@gmail.com</p>
+  <p><strong>Service Area:</strong> Indiana and surrounding areas</p>
+</section>
+
+<footer>
+  <p>ANU Group LLC | Safety. Integrity. Professional Service.</p>
+</footer>
 
 </body>
 </html>
